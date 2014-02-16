@@ -9,8 +9,42 @@
     tools:context=".MainActivity" >
 
     <TextView
+        android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:text="@string/user_page_title"
+        android:textSize="@dimen/page_title_size" />
+
+    <EditText
+        android:id="@+id/newUserTextBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/new_user_initial_value" >
+
+        <requestFocus />
+    </EditText>
+
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/newUserTextBox" >
+
+    </ListView>
+
+    <Button
+        android:id="@+id/createNewUserButton"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/newUserTextBox"
+        android:layout_alignBottom="@+id/newUserTextBox"
+        android:layout_toRightOf="@+id/newUserTextBox"
+        android:onClick="onCreateNewUserButtonClick"
+        android:text="@string/create_user_button_label" />
 
 </RelativeLayout>
