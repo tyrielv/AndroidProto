@@ -9,13 +9,12 @@
     tools:context=".MainActivity" >
 
     <EditText
-        android:id="@+id/newTodoListTextBox"
+        android:id="@+id/newTodoListItemTextBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/userNameTextView"
+        android:layout_below="@+id/listNameTextView"
         android:ems="10"
-        android:inputType="textShortMessage"
-        android:text="@string/todo_list_initial_name" >
+        android:inputType="textShortMessage" >
 
         <requestFocus />
     </EditText>
@@ -25,7 +24,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/newTodoListTextBox" >
+        android:layout_below="@+id/newTodoListItemTextBox" >
 
     </ListView>
 
@@ -34,14 +33,14 @@
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/newTodoListTextBox"
-        android:layout_alignBottom="@+id/newTodoListTextBox"
-        android:layout_toRightOf="@+id/newTodoListTextBox"
-        android:onClick="onCreateNewListButtonClick"
-        android:text="@string/create_list_button_label" />
+        android:layout_alignBaseline="@+id/newTodoListItemTextBox"
+        android:layout_alignBottom="@+id/newTodoListItemTextBox"
+        android:layout_toRightOf="@+id/newTodoListItemTextBox"
+        android:onClick="onCreateNewItemButtonClick"
+        android:text="@string/create_item_button_label" />
     
     <TextView
-        android:id="@+id/userNameTextView"
+        android:id="@+id/listNameTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"

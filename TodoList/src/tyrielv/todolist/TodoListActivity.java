@@ -50,7 +50,10 @@ public class TodoListActivity extends ListActivity {
 	@Override
 	public void onListItemClick(ListView l, View v, int position, long id)
 	{
-		//Intent intent = new Intent(this);
+		Intent intent = new Intent(this, TodoListDetailsActivity.class);
+		String listName = listNames.get(position);
+		intent.putExtra(TodoListDetailsActivity.LISTNAME_MESSAGE, listName);
+		startActivity(intent);		
 		
 	}
 }
