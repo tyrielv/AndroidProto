@@ -3,10 +3,12 @@ package tyrielv.todolist;
 import java.util.ArrayList;
 import android.os.Bundle;
 import android.app.ListActivity;
+import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.ListView;
 
 public class MainActivity extends ListActivity {	
 	
@@ -35,6 +37,16 @@ public class MainActivity extends ListActivity {
 			users.add(newUserName);
 			adapter.notifyDataSetChanged();
 		}
+		
 	}
 
+	@Override
+	public void onListItemClick(ListView l, View v, int position, long id)
+	{
+		Intent intent = new Intent(this, TodoListActivity.class);
+		String user = users.get(position);
+		intent.putExtra(TodoListActivity.USERNAME_MESSAGE, user);
+		startActivity(intent);		
+	}
+	
 }
